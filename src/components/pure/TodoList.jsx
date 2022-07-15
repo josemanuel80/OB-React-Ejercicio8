@@ -4,8 +4,14 @@ import PropTypes from 'prop-types';
 export const TodoList = ({ todos, onTodosClick }) => {
   return (
     <ul>
-      {todos.map((todo) => {
-        return <Todo {...todo} onTodoClick={() => onTodosClick(todo.id)} />;
+      {todos.map((todo, index) => {
+        return (
+          <Todo
+            key={index}
+            {...todo}
+            onTodoClick={() => onTodosClick(todo.id)}
+          />
+        );
       })}
     </ul>
   );
