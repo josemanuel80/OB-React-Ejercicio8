@@ -6,8 +6,8 @@ import { Filteroptions } from './components/pure/FilterOptions';
 function App() {
   return (
     <div className="App">
-      <FormContainer />
       <TodoListContainer />
+      <FormContainer />
       <Filteroptions />
     </div>
   );

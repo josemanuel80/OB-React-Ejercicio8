@@ -3,17 +3,20 @@ import PropTypes from 'prop-types';
 
 export const TodoList = ({ todos, onTodosClick }) => {
   return (
-    <ul>
-      {todos.map((todo, index) => {
-        return (
-          <Todo
-            key={index}
-            {...todo}
-            onTodoClick={() => onTodosClick(todo.id)}
-          />
-        );
-      })}
-    </ul>
+    <>
+      <h1>YOUR TODOS</h1>
+      <ul>
+        {todos.map((todo, index) => {
+          return (
+            <Todo
+              key={index}
+              {...todo}
+              onTodoClick={() => onTodosClick(todo.id)}
+            />
+          );
+        })}
+      </ul>
+    </>
   );
 };
 TodoList.propTypes = {
