@@ -1,20 +1,24 @@
 let newId = 0;
 
+export const ADD_TODO = 'ADDTODO';
+export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
+
 export const addTodo = (text) => {
   return {
-    type: 'ADD_TODO',
+    type: ADD_TODO,
     payload: { text, id: newId++ },
   };
 };
 export const toggleTodo = (id) => {
   return {
-    type: 'TOGGLE_TODO',
+    type: TOGGLE_TODO,
     payload: { id },
   };
 };
 export const setVisibilityFilter = (filter) => {
   return {
-    type: 'SET_VISIBILITY_FILTER',
+    type: SET_VISIBILITY_FILTER,
     payload: { filter },
   };
 };

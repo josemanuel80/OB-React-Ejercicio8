@@ -1,12 +1,14 @@
+import { ADD_TODO, TOGGLE_TODO } from '../actions/action';
+
 export const todosReducer = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_TODO': {
+    case ADD_TODO: {
       return [
         ...state,
         { text: action.payload.text, id: action.payload.id, completed: false },
       ];
     }
-    case 'TOGGLE_TODO': {
+    case TOGGLE_TODO: {
       return state.map((todo) =>
         todo.id === action.payload.id
           ? { ...todo, completed: !todo.completed }
